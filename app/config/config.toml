@@ -1,0 +1,6 @@
+[application]
+url = "https://computer-database.gatling.io/computers"
+
+[framework]
+headless = "false"
+browser = "firefox"
