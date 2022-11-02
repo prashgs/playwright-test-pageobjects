@@ -13,5 +13,5 @@ def browser():
 @pytest.fixture
 async def page(browser):
     await browser.setup()
-    await browser.open_url(url = os.getenv("URL"))
+    await browser.open_url(url=os.getenv("URL"))
     return browser.page
