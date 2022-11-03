@@ -1,8 +1,9 @@
 from app.locators.computers import Computers
 from playwright.async_api import Page
 
+
 class ComputersPage:
-    def __init__(self, page:Page) -> None:
+    def __init__(self, page: Page) -> None:
         self.page = page
         self.selectors = Computers()
 

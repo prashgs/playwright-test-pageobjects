@@ -11,22 +11,3 @@ class NewComputer(BaseModel):
 
 class NewComputersModel(BaseModel):
     newComputers: List[NewComputer]
-
-
-# data = {"newComputers": [
-#     {
-#         "computerName": "Test 111",
-#         "introducedData": "2020-01-01",
-#         "discontinuedData": "2022-01-01",
-#         "company": "Samsung Electronics"
-#     },
-#     {
-#         "computerName": "Test 222",
-#         "introducedData": "2020-01-01",
-#         "discontinuedData": "2022-01-01",
-#         "company": "ASUS"
-#     }
-# ]}
-
-# a = NewComputersModel(**data)
-# print(a)
