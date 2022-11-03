@@ -1,7 +1,7 @@
 import inspect
 import os.path
 
-import app.locators as locators
+import app.selectors as selectors
 import app.data as data
 import app.models as models
 import app.pages as pages
@@ -10,7 +10,7 @@ from app.helpers.utils import read_data_file
 
 
 class FileDefinitions:
-    locators_dir = os.path.dirname(inspect.getfile(locators))
+    locators_dir = os.path.dirname(inspect.getfile(selectors))
     data_dir = os.path.dirname(inspect.getfile(data))
     models_dir = os.path.dirname(inspect.getfile(models))
     config_dir = os.path.dirname(inspect.getfile(config))

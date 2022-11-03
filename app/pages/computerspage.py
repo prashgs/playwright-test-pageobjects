@@ -1,4 +1,4 @@
-from app.locators.computers import Computers
+from app.selectors.computers import Computers
 from playwright.async_api import Page
 
 
