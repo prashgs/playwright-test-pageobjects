@@ -1,5 +1,5 @@
 
-# Playwright python - Page Object model framework
+# Playwright python - Page Object model
 Playwright is an open source web automation framework. It has bindings for many programming languages including Python. For more information about Playwright please use this [link](https://playwright.dev/python/). Page Object model is a design pattern that can be used to build UI Automation framework to be efficient and easily maintainable. This project implements Page Object Model using Playwright and Pytest in Python. It also used Async-API that Playwright exposure which includes auto-waits when interacting with locators.
 
 ### Installation
@@ -21,7 +21,7 @@ pip install pydantic
    + **data**: Data used by the framework is maintained in ".json" files in this folder
    + **helpers**: "utils.py" file contains helper functions that 
    + **selectors**: All the selectors used on different pages are places in this directory as ".py" files. 
-   + **models**: 
-   + **pages**
-- **results** - Test results is placed here
+   + **models**: Data files of format ".json" is deserialized using the model provided to an object. This is used to validate data and its conformance to data model. Validation errors will result if data is missing or if data type is not same as mentioned on the model class. 
+   + **pages**: Pages contains page entities of the application under test. It could be the whole page as a class or components within the page if there are many elements within a page. 
+- **results** - Test results are placed here
 - **test** - Contains "conftest.py" and other tests specific to application under test. "conftest.py" has fixtures that can be shared across different tests. 
