@@ -1,13 +1,16 @@
 from app.selectors.newcomputer import NewComputer
 from playwright.async_api import Page
+from app.core.logger import logger
 
 
 class AddComputerPage:
     def __init__(self, page: Page) -> None:
+        logger.info(__name__)
         self.page = page
         self.selectors = NewComputer()
 
     async def add(self, data):
+        logger.info(__name__)
         if data.computerName:
             await self.page.locator(self.selectors.computer_name).fill(data.computerName)
         if data.introducedData:
@@ -18,4 +21,5 @@ class AddComputerPage:
             await self.page.locator(self.selectors.select_company).select_option(label=data.company)
 
     async def create_computer(self):
+        logger.info(__name__)
         await self.page.locator(self.selectors.create_computer).click()

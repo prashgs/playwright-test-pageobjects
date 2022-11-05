@@ -9,7 +9,7 @@ from app.models.newcomputermodel import NewComputersModel
 from app.pages.addcomputerpage import AddComputerPage
 from app.pages.computerspage import ComputersPage
 from playwright.async_api import expect
-
+from app.core.logger import logger
 
 @pytest.fixture
 def data() -> dict:
@@ -21,6 +21,7 @@ def data() -> dict:
 
 @pytest.mark.asyncio
 async def test_homepage(browser, page, data):
+    logger.info(__name__)
     homepage = await page
     computers_page = ComputersPage(page=homepage)
 
@@ -30,4 +31,6 @@ async def test_homepage(browser, page, data):
         await add_computer_page.add(item)
         await add_computer_page.create_computer()
         await expect(homepage.locator(computers_page.selectors.alert_message)).to_have_text(re.compile(item.computerName))
+
+
         

@@ -1,11 +1,12 @@
 import os
 import asyncio
 from playwright.async_api import async_playwright
-
+from app.core.logger import logger
 
 class PlaywrightBrowser:
 
     def __init__(self, browser_type: str = 'chrome'):
+        logger.info(__name__)
         self._browser_type = browser_type
         self._playwright = None
         self._instance = None
@@ -55,6 +56,7 @@ class PlaywrightBrowser:
         self._url = value
 
     async def setup(self):
+        logger.info(__name__)
         args = ['--start-maximized', '--windows-size=1920,1080']
         self.playwright = await async_playwright().start()
 
@@ -72,10 +74,12 @@ class PlaywrightBrowser:
         self.page = await self.context.new_page()
 
     async def open_url(self, url: str):
+        logger.info(__name__)
         if url:
             self.url = url
         await self.page.goto(url=self.url)
 
     async def close(self):
+        logger.info(__name__)
         await self.instance.close()
         await self.playwright.stop()
