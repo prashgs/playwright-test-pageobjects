@@ -1,6 +1,6 @@
 
 # Playwright python - Page Object model
-Playwright is an open source web automation framework. It has bindings for many programming languages including Python. For more information about Playwright please use this [link](https://playwright.dev/python/). Page Object model is a design pattern that can be used to build UI Automation framework to be efficient and easily maintainable. This project implements Page Object Model using Playwright and Pytest in Python. It also used Async-API that Playwright exposure which includes auto-waits when interacting with locators.
+Playwright is an open source web automation framework. It has bindings for many programming languages including Python. For more information about Playwright please use this [link](https://playwright.dev/python/). Page Object model is a design pattern that can be used to build UI Automation framework to be efficient and maintainable. This project implements Page Object Model using Playwright and Pytest in Python. It uses Async-API that Playwright exposes which includes auto-waits when interacting with locators.
 
 ### Installation
 Playwright recommends using Playwright Pytest plugin for scripting which can be installed using pip and binaries for browsers can be installed on different operating systems using 

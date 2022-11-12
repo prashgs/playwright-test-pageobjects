@@ -1,8 +1,4 @@
-from app.core.logger import logger
-
-
 class NewComputer:
-    logger.info(__name__)
     computer_name = '#name'
     introduced_date = '#introduced'
     discontinued_date = '#discontinued'
