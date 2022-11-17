@@ -1,2 +1,5 @@
 pytest-playwright
 pydantic
+toml
+pytest-asyncio
+pytest-html

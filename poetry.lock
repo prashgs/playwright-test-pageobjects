@@ -114,6 +114,14 @@ dev = ["pre-commit", "tox"]
 testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
+name = "py"
+version = "1.11.0"
+description = "library with cross-python path, ini-parsing, io, code, log facilities"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[[package]]
 name = "pydantic"
 version = "1.10.2"
 description = "Data validation and settings management using python type hints"
@@ -171,6 +179,20 @@ tomli = {version = ">=1.0.0", markers = "python_version < \"3.11\""}
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
 
 [[package]]
+name = "pytest-asyncio"
+version = "0.20.2"
+description = "Pytest support for asyncio"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+pytest = ">=6.1.0"
+
+[package.extras]
+testing = ["coverage (>=6.2)", "flaky (>=3.5.0)", "hypothesis (>=5.7.1)", "mypy (>=0.931)", "pytest-trio (>=0.7.0)"]
+
+[[package]]
 name = "pytest-base-url"
 version = "2.0.0"
 description = "pytest plugin for URL based testing"
@@ -181,6 +203,30 @@ python-versions = ">=3.7,<4.0"
 [package.dependencies]
 pytest = ">=3.0.0,<8.0.0"
 requests = ">=2.9"
+
+[[package]]
+name = "pytest-html"
+version = "3.2.0"
+description = "pytest plugin for generating HTML reports"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+py = ">=1.8.2"
+pytest = ">=5.0,<6.0.0 || >6.0.0"
+pytest-metadata = "*"
+
+[[package]]
+name = "pytest-metadata"
+version = "2.0.4"
+description = "pytest plugin for test session metadata"
+category = "main"
+optional = false
+python-versions = ">=3.7,<4.0"
+
+[package.dependencies]
+pytest = ">=3.0.0,<8.0.0"
 
 [[package]]
 name = "pytest-playwright"
@@ -237,6 +283,14 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "toml"
+version = "0.10.2"
+description = "Python Library for Tom's Obvious, Minimal Language"
+category = "main"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[[package]]
 name = "tomli"
 version = "2.0.1"
 description = "A lil' TOML parser"
@@ -268,7 +322,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "bc7f082a013d0b570635d1b975e27b9ada24fe133293a6a79dec875bb193a70a"
+content-hash = "fcb6436b55fb642b8e601170f52002c9d23aa1806699a07a0e562f07e7296414"
 
 [metadata.files]
 attrs = [
@@ -378,6 +432,10 @@ pluggy = [
     {file = "pluggy-1.0.0-py2.py3-none-any.whl", hash = "sha256:74134bbf457f031a36d68416e1509f34bd5ccc019f0bcc952c7b909d06b37bd3"},
     {file = "pluggy-1.0.0.tar.gz", hash = "sha256:4224373bacce55f955a878bf9cfa763c1e360858e330072059e10bad68531159"},
 ]
+py = [
+    {file = "py-1.11.0-py2.py3-none-any.whl", hash = "sha256:607c53218732647dff4acdfcd50cb62615cedf612e72d1724fb1a0cc6405b378"},
+    {file = "py-1.11.0.tar.gz", hash = "sha256:51c75c4126074b472f746a24399ad32f6053d1b34b68d2fa41e558e6f4a98719"},
+]
 pydantic = [
     {file = "pydantic-1.10.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:bb6ad4489af1bac6955d38ebcb95079a836af31e4c4f74aba1ca05bb9f6027bd"},
     {file = "pydantic-1.10.2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:a1f5a63a6dfe19d719b1b6e6106561869d2efaca6167f84f5ab9347887d78b98"},
@@ -428,9 +486,21 @@ pytest = [
     {file = "pytest-7.2.0-py3-none-any.whl", hash = "sha256:892f933d339f068883b6fd5a459f03d85bfcb355e4981e146d2c7616c21fef71"},
     {file = "pytest-7.2.0.tar.gz", hash = "sha256:c4014eb40e10f11f355ad4e3c2fb2c6c6d1919c73f3b5a433de4708202cade59"},
 ]
+pytest-asyncio = [
+    {file = "pytest-asyncio-0.20.2.tar.gz", hash = "sha256:32a87a9836298a881c0ec637ebcc952cfe23a56436bdc0d09d1511941dd8a812"},
+    {file = "pytest_asyncio-0.20.2-py3-none-any.whl", hash = "sha256:07e0abf9e6e6b95894a39f688a4a875d63c2128f76c02d03d16ccbc35bcc0f8a"},
+]
 pytest-base-url = [
     {file = "pytest-base-url-2.0.0.tar.gz", hash = "sha256:e1e88a4fd221941572ccdcf3bf6c051392d2f8b6cef3e0bc7da95abec4b5346e"},
     {file = "pytest_base_url-2.0.0-py3-none-any.whl", hash = "sha256:ed36fd632c32af9f1c08f2c2835dcf42ca8fcd097d6ed44a09f253d365ad8297"},
+]
+pytest-html = [
+    {file = "pytest-html-3.2.0.tar.gz", hash = "sha256:c4e2f4bb0bffc437f51ad2174a8a3e71df81bbc2f6894604e604af18fbe687c3"},
+    {file = "pytest_html-3.2.0-py3-none-any.whl", hash = "sha256:868c08564a68d8b2c26866f1e33178419bb35b1e127c33784a28622eb827f3f3"},
+]
+pytest-metadata = [
+    {file = "pytest_metadata-2.0.4-py3-none-any.whl", hash = "sha256:acb739f89fabb3d798c099e9e0c035003062367a441910aaaf2281bc1972ee14"},
+    {file = "pytest_metadata-2.0.4.tar.gz", hash = "sha256:fcc653f65fe3035b478820b5284fbf0f52803622ee3f60a2faed7a7d3ba1f41e"},
 ]
 pytest-playwright = [
     {file = "pytest-playwright-0.3.0.tar.gz", hash = "sha256:62b843b73d259431380393b335bee65cc7a420c9095c83f78274b6b508cb2f33"},
@@ -447,6 +517,10 @@ requests = [
 text-unidecode = [
     {file = "text-unidecode-1.3.tar.gz", hash = "sha256:bad6603bb14d279193107714b288be206cac565dfa49aa5b105294dd5c4aab93"},
     {file = "text_unidecode-1.3-py2.py3-none-any.whl", hash = "sha256:1311f10e8b895935241623731c2ba64f4c455287888b18189350b67134a822e8"},
+]
+toml = [
+    {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
+    {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
 ]
 tomli = [
     {file = "tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},

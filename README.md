@@ -6,6 +6,8 @@ Playwright is an open source web automation framework. It has bindings for many 
 Playwright recommends using Playwright Pytest plugin for scripting which can be installed using pip and binaries for browsers can be installed on different operating systems using 
 ```
 pip install pytest-playwright
+pip install pytest-asyncio
+pip install pytest-html
 playwright install
 ```
 Pydantic(https://pydantic-docs.helpmanual.io/) is used for data validation and conformance which can be installed using 
@@ -25,3 +27,9 @@ pip install pydantic
    + **pages**: Pages contains page entities of the application under test. It could be the whole page as a class or components within the page if there are many elements within a page. 
 - **results** - Test results are placed here
 - **test** - Contains "conftest.py" and other tests specific to application under test. "conftest.py" has fixtures that can be shared across different tests. 
+
+## Usage
+To run all test and write create html report use
+```
+pytest --html=./results/report.html --self-contained-html
+```

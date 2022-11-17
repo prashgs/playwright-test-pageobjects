@@ -1,7 +1,9 @@
 import os
+
 import pytest
-from src.core.playwrightbrowser import PlaywrightBrowser
+
 from src.core.logger import logger
+from src.core.playwrightbrowser import PlaywrightBrowser
 
 
 @pytest.fixture
