@@ -1,6 +1,6 @@
-from app.selectors.newcomputer import NewComputer
+from src.selectors.newcomputer import NewComputer
 from playwright.async_api import Page
-from app.core.logger import logger
+from src.core.logger import logger
 
 
 class AddComputerPage:

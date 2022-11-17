@@ -1,13 +1,13 @@
 import inspect
 import os.path
 
-import app.selectors as selectors
-import app.data as data
-import app.models as models
-import app.pages as pages
-import app.config as config
+import src.selectors as selectors
+import src.data as data
+import src.models as models
+import src.pages as pages
+import src.config as config
 import results as results
-from app.helpers.utils import read_data_file
+from src.helpers.utils import read_data_file
 
 
 class FileDefinitions:

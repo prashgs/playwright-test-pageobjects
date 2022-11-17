@@ -1,7 +1,7 @@
 import os
 import asyncio
 from playwright.async_api import async_playwright
-from app.core.logger import logger
+from src.core.logger import logger
 
 class PlaywrightBrowser:
 

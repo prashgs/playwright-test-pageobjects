@@ -3,13 +3,13 @@ import re
 from time import sleep
 
 import pytest
-from app.core.filedefinitions import FileDefinitions
-from app.helpers.utils import read_data_file
-from app.models.newcomputermodel import NewComputersModel
-from app.pages.addcomputerpage import AddComputerPage
-from app.pages.computerspage import ComputersPage
+from src.core.filedefinitions import FileDefinitions
+from src.helpers.utils import read_data_file
+from src.models.newcomputermodel import NewComputersModel
+from src.pages.addcomputerpage import AddComputerPage
+from src.pages.computerspage import ComputersPage
 from playwright.async_api import expect
-from app.core.logger import logger
+from src.core.logger import logger
 
 @pytest.fixture
 def data() -> dict:

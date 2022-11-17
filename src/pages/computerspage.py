@@ -1,6 +1,6 @@
-from app.selectors.computers import Computers
+from src.selectors.computers import Computers
 from playwright.async_api import Page
-from app.core.logger import logger
+from src.core.logger import logger
 
 class ComputersPage:
     def __init__(self, page: Page) -> None:

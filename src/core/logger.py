@@ -1,5 +1,5 @@
 import logging
-from app.core.filedefinitions import FileDefinitions
+from src.core.filedefinitions import FileDefinitions
 
 
 logger = logging.getLogger(__name__)

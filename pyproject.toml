@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "playwright-test-pageobjects"
+version = "0.1.0"
+description = ""
+authors = ["prashgs <prashanth.gs@gmail.com>"]
+readme = "README.md"
+packages = [{include = "playwright_test_pageobjects"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+playwright = "^1.28.0"
+pytest-playwright = "^0.3.0"
+pydantic = "^1.10.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
