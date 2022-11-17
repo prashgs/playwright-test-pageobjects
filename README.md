@@ -17,7 +17,7 @@ pip install pydantic
 
 
 ### Structure
-- **app** - This is the parent folder which contains subfolders for model, logic and data. 
+- **src** - This is the parent folder which contains subfolders for model, logic and data. 
    + **config**: Configuration related to framework and application is maintained in "config.toml" file.
    + **core**: Includes "playwrightbrowser.py" which initializes Async Playwright browser object and "filedefinitions.py" which initilizes environment variables. 
    + **data**: Data used by the framework is maintained in ".json" files in this folder
