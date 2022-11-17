@@ -29,7 +29,7 @@ pip install pydantic
 - **test** - Contains "conftest.py" and other tests specific to application under test. "conftest.py" has fixtures that can be shared across different tests. 
 
 ## Usage
-To run all test and write create html report use
+To run all tests and create html report use
 ```
 pytest --html=./results/report.html --self-contained-html
 ```
