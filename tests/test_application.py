@@ -2,7 +2,7 @@ import os
 import re
 
 import pytest
-from playwright.sync_api import expect, Page
+from playwright.sync_api import expect, Page, sync_playwright
 
 from src.core.filedefinitions import FileDefinitions
 from src.core.logger import logger
@@ -20,9 +20,9 @@ def data() -> dict:
     return data
 
 
-@pytest.mark.asyncio
-def test_homepage(page: Page, data):
+def test_homepage(browser: sync_playwright, page: Page, data):
     logger.info(__name__)
+    browser
     page.goto(os.environ['URL'])
     computers_page = ComputersPage(page=page)
 
