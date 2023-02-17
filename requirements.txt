@@ -3,3 +3,4 @@ pydantic
 toml
 pytest-asyncio
 pytest-html
+aiohttp

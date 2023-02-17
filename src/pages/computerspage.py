@@ -1,6 +1,7 @@
 from src.selectors.computers import Computers
-from playwright.async_api import Page
+from playwright.sync_api import Page
 from src.core.logger import logger
+
 
 class ComputersPage:
     def __init__(self, page: Page) -> None:
@@ -8,6 +9,6 @@ class ComputersPage:
         self.page = page
         self.selectors = Computers()
 
-    async def add_new_computer(self):
+    def add_new_computer(self):
         logger.info(__name__)
-        await self.page.locator(self.selectors.add_new_computer).click()
+        self.page.locator(self.selectors.add_new_computer).click()

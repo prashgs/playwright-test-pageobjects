@@ -1,4 +1,4 @@
-from playwright.async_api import Page, TimeoutError as PlaywrightTimeoutError
+from playwright.sync_api import Page, TimeoutError as PlaywrightTimeoutError
 
 
 class Element:
