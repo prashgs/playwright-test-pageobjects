@@ -1,7 +1,8 @@
-from playwright.sync_api import Page, TimeoutError as PlaywrightTimeoutError
+from playwright.sync_api import Page
 
 
-class Element:
+class BaseElement:
+
     def __init__(self, page: Page, selector: str):
         self.page = page
         self.selector = selector

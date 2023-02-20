@@ -7,8 +7,8 @@ class ComputersPage:
     def __init__(self, page: Page) -> None:
         logger.info(__name__)
         self.page = page
-        self.selectors = Computers()
+        self.locators = Computers(self.page)
 
     def add_new_computer(self):
         logger.info(__name__)
-        self.page.locator(self.selectors.add_new_computer).click()
+        self.locators.add_new_computer.click_element()

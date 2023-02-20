@@ -22,7 +22,7 @@ def data() -> dict:
 
 def test_homepage(browser: sync_playwright, page: Page, data):
     logger.info(__name__)
-    browser
+
     page.goto(os.environ['URL'])
     computers_page = ComputersPage(page=page)
 
@@ -31,4 +31,4 @@ def test_homepage(browser: sync_playwright, page: Page, data):
         computers_page.add_new_computer()
         add_computer_page.add(item)
         add_computer_page.create_computer()
-        expect(page.locator(computers_page.selectors.alert_message)).to_have_text(re.compile(item.computerName))
+        expect(computers_page.locators.alert_message).to_have_text(re.compile(item.computerName))
