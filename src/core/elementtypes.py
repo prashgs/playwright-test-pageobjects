@@ -16,9 +16,7 @@ class TextInput(BaseElement):
         element = self.page.locator(self.selector)
         element.fill(value=value)
 
-    def click_element(self):
-        element = self.page.locator(self.selector)
-        element.click()
+
 
 
 class Button(BaseElement):
@@ -33,6 +31,7 @@ class Button(BaseElement):
         element = self.page.locator(self.selector)
         element.click()
 
+
 class GenericElement(BaseElement):
     """
     A page element representing a text input field.
@@ -41,5 +40,5 @@ class GenericElement(BaseElement):
     def __init__(self, page: Page, selector: str):
         super().__init__(page, selector)
 
-    def __get__(self, instance, selector) -> Locator:
-        return instance.page.locator(selector=selector)
+    # def __call__(self) -> Locator:
+    #     return self.page.locator(self.selector)

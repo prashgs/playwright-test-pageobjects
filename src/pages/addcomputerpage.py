@@ -1,5 +1,5 @@
 from src.core.basepage import BasePage
-from src.selectors.newcomputer import NewComputer
+from src.locators.newcomputer import NewComputer
 from playwright.sync_api import Page, Locator
 from src.core.logger import logger
 
