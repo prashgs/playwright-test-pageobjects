@@ -13,10 +13,7 @@ class TextInput(BaseElement):
         super().__init__(page, selector)
 
     def send_keys(self, value):
-        element = self.page.locator(self.selector)
-        element.fill(value=value)
-
-
+        self.__call__().fill(value=value)
 
 
 class Button(BaseElement):
@@ -26,10 +23,11 @@ class Button(BaseElement):
 
     def __init__(self, page: Page, selector: str):
         super().__init__(page, selector)
+        self.locator = self.page.locator(selector=selector)
 
-    def click_element(self):
-        element = self.page.locator(self.selector)
-        element.click()
+    def click_custom(self):
+        self.locator.click(trial=True)
+        self.locator.click()
 
 
 class GenericElement(BaseElement):

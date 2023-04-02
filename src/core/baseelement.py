@@ -1,5 +1,5 @@
 from playwright.sync_api import Page, Locator
-
+from abc import abstractmethod
 
 class BaseElement:
 
@@ -9,3 +9,7 @@ class BaseElement:
 
     def __call__(self) -> Locator:
         return self.page.locator(self.selector)
+
+    @abstractmethod
+    def click_custom(self):
+        return

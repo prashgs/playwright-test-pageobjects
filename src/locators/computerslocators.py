@@ -1,5 +1,5 @@
 from playwright.sync_api import Page, Locator
-from src.core.elementtypes import GenericElement, TextInput
+from src.core.elementtypes import Button, GenericElement, TextInput
 
 
 class ComputersLocators:
@@ -12,17 +12,13 @@ class ComputersLocators:
         self.page = page
 
     @property
-    def search_box(self) -> Locator:
-        locator = TextInput(self.page, selector=self.__search_box_selector)
-        return locator()
+    def search_box(self):
+        return TextInput(self.page, selector=self.__search_box_selector)
 
     @property
-    def add_new_computer(self) -> Locator:
-        locator = TextInput(
-            self.page, selector=self.__add_new_computer_selector)
-        return locator()
+    def add_new_computer(self):
+        return Button(self.page, selector=self.__add_new_computer_selector)
 
     @property
-    def alert_message(self) -> Locator:
-        locator = GenericElement(self.page, selector=self.__alert_message)
-        return locator()
+    def alert_message(self):
+        return GenericElement(self.page, selector=self.__alert_message)

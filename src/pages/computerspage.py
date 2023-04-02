@@ -11,4 +11,4 @@ class ComputersPage:
 
     def add_new_computer(self):
         logger.info(__name__)
-        self.locators.add_new_computer.click()
+        self.locators.add_new_computer.click_custom()
