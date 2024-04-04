@@ -7,9 +7,7 @@ COPY ./requirements.txt ./
 
 RUN apt-get update && \
     apt-get install -y
-
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
+RUN playwright install --with-deps chromium
 
-RUN playwright install chromium
-
-CMD ["playwright", "--version"]
+CMD ["pytest", "/app/tests/test_sample.py"]
